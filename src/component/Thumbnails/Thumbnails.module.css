@@ -1,0 +1,60 @@
+img {
+	width: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.thumbnails {
+	display: flex;
+	width: 100%;
+	max-width: 400px;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px 20px;
+	box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.2);
+	margin: 0 0 0 20px;
+}
+.thumbnailsImg {
+	width: 25%;
+}
+.thumbnailsImg > * {
+	border-radius: 4px;
+}
+.thumbnailsDesc {
+	margin-right: auto;
+}
+.thumbnailsDesc > * {
+	padding: 8px;
+	max-width: 120px;
+}
+
+.date {
+	font-size: 12px;
+	color: rgba(190, 0, 0, 0.74);
+}
+
+.task {
+	font-weight: 400;
+}
+
+.thumbnailsAction {
+	display: flex;
+}
+
+.btn {
+	padding: 6px 8px;
+	cursor: pointer;
+	margin: 0 2px;
+	background: rgb(230, 230, 230);
+	color: #333;
+	transition: all 0.2s ease-in;
+}
+
+.btn:hover {
+	background: rgb(65, 65, 65);
+	color: #fff;
+}
+
+.btn:first-child {
+	margin-right: 16px;
+}

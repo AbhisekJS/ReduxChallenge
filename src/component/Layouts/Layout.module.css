@@ -1,0 +1,22 @@
+.sidebar {
+	width: 25%;
+	max-width: 240px;
+	float: left;
+	background-color: steelblue;
+}
+.containerMain {
+	flex: 1;
+	overflow: auto;
+	padding-bottom: 100px;
+}
+.nav {
+	height: 70px;
+	background-color: whitesmoke;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (max-width: 600px) {
+	.sidebar {
+		display: none;
+	}
+}

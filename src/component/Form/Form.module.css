@@ -1,0 +1,106 @@
+div,
+form,
+input,
+p {
+	padding: 0;
+	margin: 0;
+	outline: none;
+	font-family: Roboto, Arial, sans-serif;
+	font-size: 14px;
+	color: #666;
+	line-height: 22px;
+}
+
+form {
+	width: 400px;
+	background: lightblue;
+	margin: 0 0 0 20px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+	padding: 20px;
+}
+
+p.top-info {
+	margin: 10px 0;
+}
+input,
+select,
+textarea {
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+input {
+	width: calc(100% - 10px);
+	padding: 5px;
+}
+
+input:hover::placeholder {
+	color: steelblue;
+}
+
+.item {
+	position: relative;
+	margin: 10px 0;
+}
+input[type='date']::-webkit-inner-spin-button {
+	display: none;
+}
+.item i,
+input[type='date']::-webkit-calendar-picker-indicator {
+	position: absolute;
+	font-size: 20px;
+	color: #a9a9a9;
+}
+.item i,
+input[type='time']::-webkit-calendar-picker-indicator {
+	position: absolute;
+	font-size: 20px;
+	color: #a9a9a9;
+}
+.item i {
+	right: 2%;
+	top: 30px;
+	z-index: 1;
+}
+[type='date']::-webkit-calendar-picker-indicator {
+	right: 8%;
+	z-index: 2;
+	opacity: 0.3;
+	cursor: pointer;
+}
+[type='time']::-webkit-calendar-picker-indicator {
+	right: 8%;
+	z-index: 2;
+	opacity: 0.3;
+	cursor: pointer;
+}
+.itemGroup {
+	display: flex;
+	justify-content: space-between;
+}
+.itemGroup > * {
+	width: 48%;
+}
+select {
+	width: 100%;
+	padding: 10px;
+}
+.btnContainer {
+	display: flex;
+	justify-content: flex-end;
+}
+button {
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	background: #669999;
+	font-size: 16px;
+	color: #fff;
+	cursor: pointer;
+}
+.btnCancel {
+	color: #333;
+	margin-right: 20px;
+	background: none;
+}
