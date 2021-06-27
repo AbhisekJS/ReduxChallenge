@@ -13,11 +13,11 @@ export default function TaskList() {
 	const toggleForm = useSelector((state) => state.user.toggleForm);
 
 	useEffect(() => {
-		setInterval(() => {
+		setTimeout(() => {
 			dispatch(getAllItems());
 		}, 1000);
 		dispatch(getTeams());
-		// eslint-disable-next-line react-hooks/exhaustive-deps
+		// eslint-disable-next-line
 	}, []);
 
 	return (
