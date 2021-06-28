@@ -33,7 +33,7 @@ export default function Form() {
 	function handleSubmit(e) {
 		e.preventDefault();
 		dispatch(addTask(taskInfo));
-		console.log(taskInfo);
+		// console.log(taskInfo);
 		dispatch(hideForm());
 	}
 
@@ -48,10 +48,10 @@ export default function Form() {
 	// ########################################################
 
 	function addFieldsBack() {
-		console.log(updateId, 'this');
+		// console.log(updateId, 'this');
 		const selectedItem = allItems.filter((items) => items.id === updateId);
 		const { task_msg, task_time, task_date } = selectedItem[0];
-		console.log(selectedItem, 'selected item');
+		// console.log(selectedItem, 'selected item');
 		console.log(task_msg, 'name');
 		const currentState = {
 			task: task_msg,
@@ -60,7 +60,7 @@ export default function Form() {
 			person: ''
 		};
 		updateTaskInfo(currentState);
-		console.log('fired',currentState);
+		// console.log('fired',currentState);
 	}
 
 	useEffect(() => {
