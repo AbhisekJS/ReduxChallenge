@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import classes from './Form.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-
+import {convertTime} from '../../utils/utils'
 import { addTask, updateTask, hideForm } from '../../redux';
 
 let initialState = {
@@ -43,6 +43,35 @@ export default function Form() {
 		dispatch(hideForm());
 		dispatch({ type: 'UPDATE_FIELDS', payload: false });
 	}
+
+	
+	// ########################################################
+
+	function addFieldsBack() {
+		console.log(updateId, 'this');
+		const selectedItem = allItems.filter((items) => items.id === updateId);
+		const { task_msg, task_time, task_date } = selectedItem[0];
+		console.log(selectedItem, 'selected item');
+		console.log(task_msg, 'name');
+		const currentState = {
+			task: task_msg,
+			date: task_date,
+			time: convertTime(task_time),
+			person: ''
+		};
+		updateTaskInfo(currentState);
+		console.log('fired',currentState);
+	}
+
+	useEffect(() => {
+		if (update) {
+			addFieldsBack();
+		}
+	}, [update]);
+	// console.log(update);
+
+	// ########################################################
+	
 
 	function updateFields(e) {
 		e.preventDefault();
