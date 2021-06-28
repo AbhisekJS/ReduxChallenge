@@ -67,7 +67,7 @@ export default function Form() {
 		if (update) {
 			addFieldsBack();
 		}
-	}, [update]);
+	}, [update,updateId]);
 	// console.log(update);
 
 	// ########################################################
