@@ -1,0 +1,23 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-reduxchallenge-dev-233508-authRole",
+            "UnauthRoleArn": "arn:aws:iam::039305405804:role/amplify-reduxchallenge-dev-233508-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::039305405804:role/amplify-reduxchallenge-dev-233508-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-reduxchallenge-dev-233508-deployment",
+            "UnauthRoleName": "amplify-reduxchallenge-dev-233508-unauthRole",
+            "StackName": "amplify-reduxchallenge-dev-233508",
+            "StackId": "arn:aws:cloudformation:us-east-2:039305405804:stack/amplify-reduxchallenge-dev-233508/3a4eabd0-d772-11eb-95d8-0a4b7596b37e",
+            "AmplifyAppId": "d3ifqixfojl43r"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d3ifqixfojl43r",
+                    "type": "manual"
+                }
+            }
+        }
+    }
+}

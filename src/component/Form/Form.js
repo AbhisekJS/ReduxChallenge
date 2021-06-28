@@ -15,6 +15,7 @@ export default function Form() {
 	const [taskInfo, updateTaskInfo] = useState(initialState);
 
 	const dispatch = useDispatch();
+	const allItems = useSelector((state) => state.user.allItems);
 
 	const team = useSelector((state) => state.user.allTeams);
 	const update = useSelector((state) => state.user.updateFields);
@@ -46,9 +47,10 @@ export default function Form() {
 	function updateFields(e) {
 		e.preventDefault();
 		dispatch(updateTask(updateId, taskInfo));
-		console.log(updateId, taskInfo);
+		// console.log(updateId, taskInfo);
 		dispatch({ type: 'TOGGLE_FORM', payload: false });
 	}
+	
 
 	return (
 		<form onSubmit={update ? updateFields : handleSubmit}>
@@ -59,6 +61,7 @@ export default function Form() {
 					name="task"
 					value={taskInfo.task}
 					onChange={updateForm}
+					required
 				/>
 			</div>
 			<div className={classes.itemGroup}>

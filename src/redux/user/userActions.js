@@ -1,5 +1,5 @@
 import { GET_ALL_ITEMS, GET_TEAMS, ADD_TASK, FETCH_FAILURE } from './userType';
-import timeString from '../../utils/utils';
+import {timeString} from '../../utils/utils';
 
 export const fetchTasksSuccess = (users) => {
 	return {

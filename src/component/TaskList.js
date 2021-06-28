@@ -1,4 +1,3 @@
-import '../styles.css';
 import Tasks from './Tasks/Task';
 import Thumbnails from './Thumbnails/Thumbnails';
 import Form from './Form/Form';
@@ -13,7 +12,7 @@ export default function TaskList() {
 	const toggleForm = useSelector((state) => state.user.toggleForm);
 
 	useEffect(() => {
-		setTimeout(() => {
+		setInterval(() => {
 			dispatch(getAllItems());
 		}, 1000);
 		dispatch(getTeams());
@@ -26,8 +25,8 @@ export default function TaskList() {
 			<ContainerMain>
 				<Nav />
 				<div className="taskContainer">
-					<Tasks totalTasks={allItems.length} />
-					{toggleForm && <Form />}
+					<Tasks totalTasks={allItems.length} toggle={toggleForm}/>
+					{toggleForm && <Form/>}
 					{allItems &&
 						allItems.map((items, index) => (
 							<div key={items.id}>

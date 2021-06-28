@@ -12,7 +12,7 @@ export default function Thumbnails({ items }) {
 		dispatch(displayForm());
 		dispatch({ type: 'UPDATE_FIELDS', payload: true });
 		dispatch({ type: 'UPDATE_ID', payload: id });
-		console.log(id);
+		// console.log(id);
 	};
 
 	return (
