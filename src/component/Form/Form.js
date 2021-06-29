@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react';
 import classes from './Form.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import {convertTime} from '../../utils/utils'
-import { addTask, updateTask, hideForm } from '../../redux';
+import { addTask, updateTask, hideForm, updateForm } from '../../redux';
 
 let initialState = {
 	task: '',
@@ -21,7 +21,7 @@ export default function Form() {
 	const update = useSelector((state) => state.user.updateFields);
 	const updateId = useSelector((state) => state.user.updateId);
 
-	function updateForm(e) {
+	function handleChange(e) {
 		const value = e.target.value;
 		updateTaskInfo({
 			...taskInfo,
@@ -41,7 +41,8 @@ export default function Form() {
 		e.preventDefault();
 		updateTaskInfo(initialState);
 		dispatch(hideForm());
-		dispatch({ type: 'UPDATE_FIELDS', payload: false });
+		dispatch(updateForm(false));
+		// dispatch({ type: 'UPDATE_FIELDS', payload: false });
 	}
 
 	
@@ -89,7 +90,7 @@ export default function Form() {
 					type="text"
 					name="task"
 					value={taskInfo.task}
-					onChange={updateForm}
+					onChange={handleChange}
 					required
 				/>
 			</div>

@@ -1,4 +1,4 @@
-import { GET_ALL_ITEMS, GET_TEAMS, ADD_TASK, FETCH_FAILURE } from './userType';
+import { GET_ALL_ITEMS, GET_TEAMS, FETCH_FAILURE } from './userType';
 import {timeString} from '../../utils/utils';
 
 export const fetchTasksSuccess = (users) => {
@@ -13,11 +13,7 @@ export const fetchTeamSuccess = (team) => {
 		payload: team
 	};
 };
-export const addTaskItem = (team) => {
-	return {
-		type: ADD_TASK
-	};
-};
+
 
 export const displayForm = () => {
 	return {
@@ -32,10 +28,10 @@ export const hideForm = () => {
 		payload: false
 	};
 };
-export const updateForm = () => {
+export const updateForm = (val) => {
 	return {
 		type: 'UPDATE_FIELDS',
-		payload: true
+		payload: val
 	};
 };
 export const updateId = (id) => {

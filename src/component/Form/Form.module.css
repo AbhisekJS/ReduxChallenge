@@ -79,7 +79,7 @@ input[type='time']::-webkit-calendar-picker-indicator {
 	justify-content: space-between;
 }
 .itemGroup > * {
-	width: 48%;
+	width: 50%;
 }
 select {
 	width: 100%;

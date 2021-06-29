@@ -28,7 +28,7 @@ export default function TaskList() {
 					<Tasks totalTasks={allItems.length} toggle={toggleForm}/>
 					{toggleForm && <Form/>}
 					{allItems &&
-						allItems.map((items, index) => (
+						allItems.map((items) => (
 							<div key={items.id}>
 								<Thumbnails items={items} />
 							</div>

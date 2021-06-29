@@ -4,7 +4,7 @@
 	justify-content: space-between;
 	align-items: center;
 	box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.2);
-	border-radius: 2px;
+	/* border-radius: 2px; */
 	padding: 0 0 0 20px;
 }
 .text {
@@ -18,7 +18,14 @@
 	padding: 10px 16px;
 	border: none;
 	cursor: pointer;
-	border-left: 2px solid lightgray;
+	border-left: 1px solid rgb(209, 209, 209);
 	background: none;
 	color: black;
+	border-radius: 0;
+	
+}
+.btnAdd:focus , .btnAdd:hover {
+	outline:none;
+	background-color: rgb(211, 211, 211);
+
 }

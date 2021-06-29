@@ -3,15 +3,17 @@ import { useDispatch } from 'react-redux';
 import classes from './Thumbnails.module.css';
 import { FaEdit, FaTrashAlt, FaCheckSquare } from 'react-icons/fa';
 
-import { deleteItem, displayForm } from '../../redux';
+import { deleteItem, displayForm,updateId,updateForm } from '../../redux';
 
 export default function Thumbnails({ items }) {
 	const dispatch = useDispatch();
 
 	const updateInfo = (id) => {
 		dispatch(displayForm());
-		dispatch({ type: 'UPDATE_FIELDS', payload: true });
-		dispatch({ type: 'UPDATE_ID', payload: id });
+		dispatch(updateForm(true));
+		// dispatch({ type: 'UPDATE_FIELDS', payload: true });
+		dispatch(updateId(id));
+		// dispatch({ type: 'UPDATE_ID', payload: id });
 		// console.log(id);
 	};
 
