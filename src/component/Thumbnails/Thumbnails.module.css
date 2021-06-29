@@ -15,6 +15,7 @@ img {
 }
 .thumbnailsImg {
 	width: 25%;
+	min-width: 72px;
 }
 .thumbnailsImg > * {
 	border-radius: 4px;
