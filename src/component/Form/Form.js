@@ -2,12 +2,12 @@ import React, { useState,useEffect } from 'react';
 import classes from './Form.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import {convertTime} from '../../utils/utils'
-import { addTask, updateTask, hideForm, updateForm } from '../../redux';
+import { addTask, updateTask, hideForm ,updateForm} from '../../redux';
 
 let initialState = {
 	task: '',
 	date: '',
-	time: '00:00',
+	time: '',
 	person: ''
 };
 
@@ -33,7 +33,7 @@ export default function Form() {
 	function handleSubmit(e) {
 		e.preventDefault();
 		dispatch(addTask(taskInfo));
-		// console.log(taskInfo);
+		console.log(taskInfo,'values passed');
 		dispatch(hideForm());
 	}
 
@@ -49,11 +49,9 @@ export default function Form() {
 	// ########################################################
 
 	function addFieldsBack() {
-		// console.log(updateId, 'this');
 		const selectedItem = allItems.filter((items) => items.id === updateId);
 		const { task_msg, task_time, task_date } = selectedItem[0];
-		// console.log(selectedItem, 'selected item');
-		console.log(task_msg, 'name');
+		console.log(task_msg,task_time, 'name');
 		const currentState = {
 			task: task_msg,
 			date: task_date,
@@ -61,6 +59,9 @@ export default function Form() {
 			person: ''
 		};
 		updateTaskInfo(currentState);
+		
+		// console.log(updateId, 'this');
+		// console.log(selectedItem, 'selected item');
 		// console.log('fired',currentState);
 	}
 
@@ -77,7 +78,7 @@ export default function Form() {
 	function updateFields(e) {
 		e.preventDefault();
 		dispatch(updateTask(updateId, taskInfo));
-		// console.log(updateId, taskInfo);
+		console.log(updateId, taskInfo);
 		dispatch({ type: 'TOGGLE_FORM', payload: false });
 	}
 	
@@ -118,7 +119,7 @@ export default function Form() {
 				</div>
 			</div>
 			<div className={classes.item}>
-				<select name="person" value={taskInfo.person} onChange={updateForm}>
+				<select name="person" value={taskInfo.person} onChange={handleChange}>
 					{team &&
 						team.map((name, index) => (
 							<option

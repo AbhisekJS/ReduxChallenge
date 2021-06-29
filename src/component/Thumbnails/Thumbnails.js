@@ -11,8 +11,8 @@ export default function Thumbnails({ items }) {
 	const updateInfo = (id) => {
 		dispatch(displayForm());
 		dispatch(updateForm(true));
-		// dispatch({ type: 'UPDATE_FIELDS', payload: true });
 		dispatch(updateId(id));
+		// dispatch({ type: 'UPDATE_FIELDS', payload: true });
 		// dispatch({ type: 'UPDATE_ID', payload: id });
 		// console.log(id);
 	};
