@@ -2,7 +2,7 @@ import {
 	GET_ALL_ITEMS,
 	GET_TEAMS,
 	TOGGLE_FORM,
-	UPDATE_FIELDS,
+	UPDATE_FORM,
 	UPDATE_ID,
 	FETCH_FAILURE
 } from './userType';
@@ -38,7 +38,7 @@ export const userReducer = (state = initialStateTasks, action) => {
 				toggleForm: action.payload
 			};
 
-		case UPDATE_FIELDS:
+		case UPDATE_FORM:
 			return {
 				...state,
 				updateFields: action.payload

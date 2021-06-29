@@ -14,6 +14,7 @@ export const fetchTeamSuccess = (team) => {
 	};
 };
 
+// ################ FORM ACTIONS ######################
 
 export const displayForm = () => {
 	return {
@@ -30,16 +31,21 @@ export const hideForm = () => {
 };
 export const updateForm = (val) => {
 	return {
-		type: 'UPDATE_FIELDS',
+		type: 'UPDATE_FORM',
 		payload: val
 	};
 };
+
+// ######################################################
+
 export const updateId = (id) => {
 	return {
 		type: 'UPDATE_ID',
 		payload: id
 	};
 };
+
+
 export const fetchFailure = (error) => {
 	return {
 		type: FETCH_FAILURE,

@@ -12,12 +12,10 @@ export default function TaskList() {
 	const toggleForm = useSelector((state) => state.user.toggleForm);
 
 	useEffect(() => {
-		setInterval(() => {
-			dispatch(getAllItems());
-		}, 1000);
+		dispatch(getAllItems());
 		dispatch(getTeams());
 		// eslint-disable-next-line
-	}, []);
+	}, [allItems]);
 
 	return (
 		<div className="container">

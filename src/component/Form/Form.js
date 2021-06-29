@@ -59,7 +59,7 @@ export default function Form() {
 			person: ''
 		};
 		updateTaskInfo(currentState);
-		
+
 		// console.log(updateId, 'this');
 		// console.log(selectedItem, 'selected item');
 		// console.log('fired',currentState);
