@@ -101,7 +101,7 @@ export default function Form() {
 						type="date"
 						name="date"
 						value={taskInfo.date}
-						onChange={updateForm}
+						onChange={handleChange}
 						required
 					/>
 				</div>
@@ -111,7 +111,7 @@ export default function Form() {
 						type="time"
 						name="time"
 						value={taskInfo.time}
-						onChange={updateForm}
+						onChange={handleChange}
 						required
 						placeholder="time"
 					/>
