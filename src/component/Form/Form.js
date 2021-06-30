@@ -79,7 +79,8 @@ export default function Form() {
 		e.preventDefault();
 		dispatch(updateTask(updateId, taskInfo));
 		console.log(updateId, taskInfo);
-		dispatch({ type: 'TOGGLE_FORM', payload: false });
+		dispatch(hideForm())
+		// dispatch({ type: 'TOGGLE_FORM', payload: false });
 	}
 	
 

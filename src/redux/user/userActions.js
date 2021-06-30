@@ -146,7 +146,7 @@ export const updateTask = (id, info) => async () => {
 			}
 		);
 		// const resData = await res.json();
-		console.log('posted Successfully');
+		console.log('updated Successfully');
 	} catch (err) {
 		fetchFailure(err.message);
 	}
